@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Frutas</h1>
+    <ul id="listaFrutas">
+
+
+    </ul>
+
+    <h2>Alumnos</h2>
+    <ul id="listaAlumnos">
+
+    </ul>
+    <script>
+        const lista = document.querySelector("#listaFrutas")
+        const frutas = ["Manzana", "Coco", "Banana", "Mango"]
+        let template= ""
+        for(el of frutas){
+            template +=  `<li>${el}</li>`
+        }
+        lista.innerHTML = template
+
+        const lista2 = document.querySelector("#listaAlumnos")
+        const alumnos = [{id: 1, nombre: "jose"}, {id: 2, nombre: "maria"}, {id: 3, nombre: "pepe"}]
+        let template2 = ""
+
+        for(el of alumnos){
+            template2 += `<li>${el.nombre}</li>`
+        }
+        lista2.innerHTML = template2
+    </script>
+</body>
+</html>

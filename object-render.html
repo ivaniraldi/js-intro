@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Render</title>
+</head>
+<body>
+        <section id="auto"></section>
+
+
+
+
+        <script>
+            let section = document.querySelector("#auto")
+
+
+            let autos = [
+            {
+                marca: "Suzuki",
+                color: "Rojo",
+                modelo: 2001,
+                km: 50000,
+                imgUrl: "https://img.olx.com.br/thumbs256x256/62/629548421835645.jpg"
+            },
+            {
+                marca: "Ferrari",
+                color: "Azul",
+                modelo: 2021,
+                km: 0,
+                ruedas: ["rueda 1", "rueda2", "rueda3", "rueda4"],
+                imgUrl: "https://public.blenderkit.com/thumbnails/assets/504b656313a04018962a5c3f503bfb6e/files/thumbnail_2ac62dd5-9020-477a-84d6-7c38435a9da0.jpg.256x256_q85.jpg.webp?webp_generated=1742279483"
+            },
+            {
+                marca: "Suzuki",
+                color: "Rojo",
+                modelo: 2001,
+                km: 50000,
+                imgUrl: "https://img.olx.com.br/thumbs256x256/62/629548421835645.jpg"
+            }
+            ]
+
+            let template= ""
+
+            for(el of autos){
+                template +=  `
+        <div>
+            <img src=${el.imgUrl} alt="auto">
+            <h1>Marca: ${el.marca}</h1>
+            <h2>Color: ${el.color}</h2>
+            <div>
+                <p>Modelo: ${el.modelo}</p>
+                <p>Kilometraje: ${el.km}</p>
+            </div>
+        </div>
+            `
+            }
+
+            section.innerHTML = template
+           
+
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro a JavaScript</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+      <header> 
+        <h1 class="titulo" id="idTitulo"></h1>
+        <h2>Aprendiendo JS</h2>
+        <h3>Contador= <span id="contador">0</span></h3>
+
+        <h4>Texto agrandado con JS</h4>
+
+        <button onclick="
+                let contador = document.querySelector('#contador')// guarda en la variable contador esto = <span id='contador'>0</span>
+                console.log(contador.innerHTML) // accedemos al VALOR dentro del span = 0
+                let numero = Number(contador.innerHTML) // convertimos el valor '0' de string a numero
+                contador.innerHTML = numero + 1 //le decimos que el span va a tener dentro el valor de el numero convertido anteriormente (0 + 1)
+        ">+</button>
+      </header>
+
+      <main >
+            <button onclick="
+                let titulo = document.querySelector('h1')
+                titulo.style.color = 'green'
+                ">Cambiar color al titulo a verde</button>
+
+                <input type="color" id="colorInput">
+                <button id="colorBtn">Cambiar color de fondo</button>
+      </main>
+
+      <input type="text" id="nameInput"> 
+      <button id="nameBtn">Saludar</button>
+
+      <h5></h5>
+
+      <script src="./assets/js/index.js">
+      </script>
+</body>
+</html>
